@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {githubService} from './github.service';
 import {ReposService} from './repos.service'
-//import marked from 'marked';
 
 @Component({
     selector: 'my-language',
@@ -34,14 +33,13 @@ export class MyLanguageComponent implements OnInit {
     }
 
     reloadPosts(label) {
-        //var marked = require('marked');
+        var marked = require('marked');
         this.md_content = '';   // once user click on 'select language' dropdown
         if (label.owner && label.repo) {
             this._githubService.getReadme(label.owner, label.repo)
                 .subscribe(result => {
                     this.md_content = atob(result.content);
-                    this.html_content = this.md_content;
-                    //this.html_content = marked(this.md_content);
+                    this.html_content = marked(this.md_content);
                 });
         }
 

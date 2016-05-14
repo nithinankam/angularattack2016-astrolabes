@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var github_service_1 = require('./github.service');
 var repos_service_1 = require('./repos.service');
-//import marked from 'marked';
 var MyLanguageComponent = (function () {
     function MyLanguageComponent(_githubService, _reposService) {
         this._githubService = _githubService;
@@ -24,14 +23,13 @@ var MyLanguageComponent = (function () {
     };
     MyLanguageComponent.prototype.reloadPosts = function (label) {
         var _this = this;
-        //var marked = require('marked');
+        var marked = require('marked');
         this.md_content = ''; // once user click on 'select language' dropdown
         if (label.owner && label.repo) {
             this._githubService.getReadme(label.owner, label.repo)
                 .subscribe(function (result) {
                 _this.md_content = atob(result.content);
-                _this.html_content = _this.md_content;
-                //this.html_content = marked(this.md_content);
+                _this.html_content = marked(_this.md_content);
             });
         }
     };

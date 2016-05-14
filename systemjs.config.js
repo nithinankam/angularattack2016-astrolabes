@@ -3,11 +3,12 @@
     // map tells the System loader where to look for things
     var map = {
         'app':                        'app', // 'dist',
-        'rxjs':                       'node_modules/rxjs',
-        'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        '@angular':                   'node_modules/@angular',
-        'lodash':                     'node_modules/lodash/lodash.js',
-        'marked':                     'node_modules/marked/index.js'
+
+        'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
+        'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api',
+        '@angular':                   'https://npmcdn.com/@angular',
+        'lodash':                     'https://npmcdn.com/lodash@4.12.0',
+        'marked':                     'https://npmcdn.com/marked@0.3.5'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
