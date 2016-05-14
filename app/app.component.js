@@ -42,7 +42,6 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            providers: [],
             template: "\n        <select class=\"form-control\" [(ngModel)]=\"selectedRepo\" (ngModelChange)=\"reloadPosts($event)\">\n            <option [value]=\"test\">Select Language</option>\n            <option *ngFor=\"let repo of repos\" [ngValue]=\"repo\">\n                {{ repo.name }}\n            </option>\n        </select>\n        <br>\n        {{readmeData}}\n  ",
             directives: [],
             providers: [github_service_1.githubService]
