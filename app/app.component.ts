@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {githubService} from './github.service';
+import marked from 'marked';
 
 @Component({
     selector: 'my-app',
@@ -11,14 +12,15 @@ import {githubService} from './github.service';
             </option>
         </select>
         <br>
-        {{readmeData}}
-  `,
+        <div [innerHtml]="html_content"></div>
+        `,
     directives: [],
     providers: [githubService]
 })
 export class AppComponent implements OnInit {
     repos:any[];
-    readmeData:string;
+    md_content: any;
+    html_content : any;
 
     constructor(private _githubService:githubService) {
     }
@@ -41,11 +43,13 @@ export class AppComponent implements OnInit {
     }
 
     reloadPosts(label) {
-        this.readmeData = '';   // once user click on 'select language' dropdown
+        var marked = require('marked');
+        this.md_content = '';   // once user click on 'select language' dropdown
         if (label.owner && label.repo) {
             this._githubService.getReadme(label.owner, label.repo)
                 .subscribe(result => {
-                    this.readmeData = atob(result.content);
+                    this.md_content = atob(result.content);
+                    this.html_content = marked(this.md_content);
                 });
         }
 
