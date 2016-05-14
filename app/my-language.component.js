@@ -28,7 +28,7 @@ var MyLanguageComponent = (function () {
     MyLanguageComponent = __decorate([
         core_1.Component({
             selector: 'my-language',
-            template: "\n        <select class=\"form-control\" [(ngModel)]=\"selectedRepo\" (ngModelChange)=\"reloadPosts($event)\">\n            <option [value]=\"test\">Select Language</option>\n            <option *ngFor=\"let repo of repos\" [ngValue]=\"repo\">\n                {{ repo.name }}\n            </option>\n        </select>\n  ",
+            templateUrl: 'app/my-language.component.html',
             directives: [],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 

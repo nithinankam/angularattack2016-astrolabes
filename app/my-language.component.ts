@@ -6,14 +6,7 @@ import {ReposService} from './repos.service'
 
 @Component({
     selector: 'my-language',
-    template: `
-        <select class="form-control" [(ngModel)]="selectedRepo" (ngModelChange)="reloadPosts($event)">
-            <option [value]="test">Select Language</option>
-            <option *ngFor="let repo of repos" [ngValue]="repo">
-                {{ repo.name }}
-            </option>
-        </select>
-  `,
+    templateUrl: 'app/my-language.component.html',
     directives: [],
     providers: [githubService, ReposService]
 })
