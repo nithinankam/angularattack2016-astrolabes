@@ -20,6 +20,9 @@ export class ReposService {
     }
 
     getRepo(id) {
-        return this.repos;
+        var result = this.repos.filter(function( obj ) {
+            return obj.name == id;
+        });
+        return result;
     }
 }

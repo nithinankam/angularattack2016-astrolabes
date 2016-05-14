@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {githubService} from './github.service';
 import {ReposService} from './repos.service'
-import marked from 'marked';
+//import marked from 'marked';
 
 @Component({
     selector: 'my-language',
@@ -29,7 +29,6 @@ export class MyLanguageComponent implements OnInit {
 
     ngOnInit() {
         this.repos = this._reposService.getRepos();
-
         // main 'awesome' repo that points to each languages
         this.reloadPosts(this.repos[0]);
     }

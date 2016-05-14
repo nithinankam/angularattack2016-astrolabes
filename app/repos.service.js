@@ -27,7 +27,10 @@ var ReposService = (function () {
         return this.repos;
     };
     ReposService.prototype.getRepo = function (id) {
-        return this.repos;
+        var result = this.repos.filter(function (obj) {
+            return obj.name == id;
+        });
+        return result;
     };
     ReposService = __decorate([
         core_1.Injectable(), 

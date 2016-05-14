@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var github_service_1 = require('./github.service');
 var repos_service_1 = require('./repos.service');
+//import marked from 'marked';
 var MyLanguageComponent = (function () {
     function MyLanguageComponent(_githubService, _reposService) {
         this._githubService = _githubService;
