@@ -31,18 +31,21 @@ var AppComponent = (function () {
     };
     AppComponent.prototype.reloadPosts = function (label) {
         var _this = this;
+        var marked = require('marked');
         this.readmeData = ''; // once user click on 'select language' dropdown
         if (label.owner && label.repo) {
             this._githubService.getReadme(label.owner, label.repo)
                 .subscribe(function (result) {
                 _this.readmeData = atob(result.content);
+                _this.md_content = _this.readmeData;
+                _this.html_content = marked(_this.md_content);
             });
         }
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <select class=\"form-control\" [(ngModel)]=\"selectedRepo\" (ngModelChange)=\"reloadPosts($event)\">\n            <option [value]=\"test\">Select Language</option>\n            <option *ngFor=\"let repo of repos\" [ngValue]=\"repo\">\n                {{ repo.name }}\n            </option>\n        </select>\n        <br>\n        {{readmeData}}\n  ",
+            template: "\n        <select class=\"form-control\" [(ngModel)]=\"selectedRepo\" (ngModelChange)=\"reloadPosts($event)\">\n            <option [value]=\"test\">Select Language</option>\n            <option *ngFor=\"let repo of repos\" [ngValue]=\"repo\">\n                {{ repo.name }}\n            </option>\n        </select>\n        <br>\n        <div [innerHtml]=\"html_content\"></div>\n        ",
             directives: [],
             providers: [github_service_1.githubService]
         }), 
