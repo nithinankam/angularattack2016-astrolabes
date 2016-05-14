@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var navbar_component_1 = require('./navbar.component');
 var my_language_component_1 = require('./my-language.component');
+var language_component_1 = require('./language.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -30,6 +31,11 @@ var AppComponent = (function () {
                 component: my_language_component_1.MyLanguageComponent,
                 useAsDefault: true
             },
+            {
+                path: '/:repoName',
+                name: 'Language',
+                component: language_component_1.LanguageComponent
+            }
         ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

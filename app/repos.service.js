@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var ReposService = (function () {
     function ReposService() {
         this.repos = [
-            { owner: "sindresorhus", repo: "awesome", name: "Main Awesome Repo" },
+            { owner: "sindresorhus", repo: "awesome", name: "MainRepo" },
             { owner: "gianarb", repo: "awesome-angularjs", name: "Angular" },
             { owner: "AngularClass", repo: "awesome-angular2", name: "Angular2" },
             { owner: "sadcitizen", repo: "awesome-backbone", name: "Backbone" },

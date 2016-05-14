@@ -3,7 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated
 
 import {NavBarComponent} from './navbar.component';
 import {MyLanguageComponent} from './my-language.component';
-
+import {LanguageComponent} from './language.component'
 
 @Component({
     selector: 'my-app',
@@ -22,12 +22,11 @@ import {MyLanguageComponent} from './my-language.component';
         component: MyLanguageComponent,
         useAsDefault: true
     },
-    //{
-    //    path: '/:language',
-    //    name: 'MyLanguage',
-    //    component: MyLanguageComponent,
-    //    useAsDefault: true
-    //}
+    {
+        path: '/:repoName',
+        name: 'Language',
+        component: LanguageComponent
+    }
 ])
 
 export class AppComponent implements OnInit {
