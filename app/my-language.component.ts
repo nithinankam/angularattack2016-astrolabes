@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router-deprecated';
+
 import {githubService} from './github.service';
 import {ReposService} from './repos.service'
 
@@ -11,36 +13,24 @@ import {ReposService} from './repos.service'
                 {{ repo.name }}
             </option>
         </select>
-        <br>
-        <div [innerHtml]="html_content"></div>
   `,
     directives: [],
     providers: [githubService, ReposService]
 })
 export class MyLanguageComponent implements OnInit {
     repos:any[];
-    md_content:any;
-    html_content:any;
 
-    constructor(private _githubService:githubService,
-                private _reposService:ReposService) {
+    constructor(private _reposService:ReposService,
+                private _router:Router) {
     }
 
     ngOnInit() {
         this.repos = this._reposService.getRepos();
-        // main 'awesome' repo that points to each languages
-        this.reloadPosts(this.repos[0]);
     }
 
-    reloadPosts(label) {
-        var marked = require('marked');
-        this.md_content = '';   // once user click on 'select language' dropdown
-        if (label.owner && label.repo) {
-            this._githubService.getReadme(label.owner, label.repo)
-                .subscribe(result => {
-                    this.md_content = atob(result.content);
-                    this.html_content = marked(this.md_content);
-                });
+    reloadPosts(selectedLabel) {
+        if (selectedLabel.name) {
+            this._router.navigate(['Language', {repoName: selectedLabel.name}]);
         }
 
     }
