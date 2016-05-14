@@ -1,9 +1,8 @@
-import {Component, onInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {githubService} from './github.service';
 
 @Component({
     selector: 'my-app',
-    providers: [],
     template: `
         <select class="form-control" [(ngModel)]="selectedRepo" (ngModelChange)="reloadPosts($event)">
             <option [value]="test">Select Language</option>
@@ -17,7 +16,7 @@ import {githubService} from './github.service';
     directives: [],
     providers: [githubService]
 })
-export class AppComponent implements onInit {
+export class AppComponent implements OnInit {
     repos:any[];
     readmeData:string;
 
