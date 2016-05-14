@@ -4,3 +4,17 @@
         {{ repo.name }}
     </option>
 </select>
+<br>
+<div class="row">
+    <div class="col-lg-4" *ngFor="let repo of repos">
+        <div class="panel panel-success" (click)="reloadPosts(repo)">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{repo.name}}</h3>
+            </div>
+            <div class="panel-body">
+                {{repo.name}}
+                {{repo.description}}
+            </div>
+        </div>
+    </div>
+</div>
