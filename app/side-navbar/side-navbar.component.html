@@ -1,0 +1,16 @@
+<div id="wrapper" [ngClass]="{toggled:navBarToggle}">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li *ngFor="let repo of repos"
+                [routerLink]="['Language', {languageName:repo.languageStateName}]"
+                (click)="toggleNavBarOnClick()">
+                <a>{{repo.languageDisplayName}}</a>
+            </li>
+        </ul>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

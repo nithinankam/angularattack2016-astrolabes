@@ -1,6 +1,10 @@
 {
-  "name": "angular2-quickstart",
+  "name": "awesome-library",
   "version": "1.0.0",
+  "author": [
+    "Nithin Ankam",
+    "Sanket Tajane"
+  ],
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",

@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="nav navbar-nav navbar-left" (click)="onToggleClick()">
+                <i class="fa fa-2x" [ngClass]="{'fa-arrow-right': defaultToggle, 'fa-arrow-left': !defaultToggle}"></i>
+            </a>
+            <a class="navbar-brand" [routerLink]="['AllLanguages']" (click)="defaultToggle=true">Awesome Library</a>
+            <a class="nav navbar-nav navbar-right" [routerLink]="['AllLanguages']" (click)="defaultToggle=true">Home</a>
+        </div>
+    </div>
+</nav>
+<side-navbar [navBarToggle]="defaultToggle"
+             [repos]="repos"
+             (toggleNavBar)="myToggleNavBarChanges($event)"></side-navbar>
+

@@ -4,3 +4,5 @@ src/app/**/*.js
 src/app/**/*.js.map
 .idea/*
 typings/*
+app/**/*.js
+app/**/*.js.map

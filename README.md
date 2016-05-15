@@ -1,3 +1,63 @@
+# Awesome Library
+
+Awesome Library is a github powered online library for programming.
+  - It contains  resources for learning programming
+  - Also, updates realtime as per the latest changes on Github on different programming repositories
+  - built completely using angular2 by team astrolabes as apart of angular attack hackathon
+Awesome Library, currently consists of the material for the following programming languages, frontend tools, backend tools and other miscellenous stuff:
+
+## Programming Languages
+- JavaScript
+- C
+- C/C++
+- JAVA
+- RUBY
+- TypeScript
+- JQuery
+- Python
+- Scala
+- Groovy
+
+## Frontend Tools
+- HTML5
+- CSS
+- Angular 2
+- Angular
+- React
+- Backbone
+- Meteor
+- Ember
+- Flexbox
+- Chrome Dev Tools
+- Ionic 2
+- KnockoutJs
+- Canvas
+- D3
+
+## Backend Tools
+- Docker
+- Rails
+- Nginx
+- Elastic Search
+- MongoDB
+- RethinkDB
+- Big Data
+- Hadoop
+
+## Miscellaneous
+- Algorithms
+- Selenium
+- Boilerplates
+- Internet of Things
+
+### Version
+1.0.0
+
+
+
+---
+
+
 # This is your [AngularAttack](https://www.angularattack.com) 2016 Repo
 
 This repo is the start of your AngularAttack 2016 entry. It contains the simple [Angular2 starter](https://angular.io/docs/ts/latest/quickstart.html) files.
@@ -39,7 +99,7 @@ If you receive an error message `"You do not have permission to publish to astro
 
 ### Step 3) Add Your Team Members to Surge
 
-* `surge . --add sanket.tajane@gmail.com,c.varun.mehta@uptake.com,pragadees123@gmail.com,c.nithin.ankam@uptake.com`
+* `surge . --add <your-email>`
 
 
 ### Step 4) Wait til competition starts

@@ -1,7 +1,0 @@
-.panel {
-    transition: all 0.4s ease-in-out;
-}
-
-.panel:hover {
-    transform: scale(0.90);
-}
