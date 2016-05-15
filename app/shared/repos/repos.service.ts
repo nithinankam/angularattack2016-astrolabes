@@ -10,7 +10,7 @@ export class ReposService {
             languageDisplayName: "HTML5",
             startIndex: "##Articles and standards",
             endIndex: "##Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/HTML5.png"
         },
         {
             owner: "sotayamashita",
@@ -19,7 +19,7 @@ export class ReposService {
             languageDisplayName: "CSS",
             startIndex: "## Preprocessors",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/CSS.png"
         },
         {
             owner: "sorrycc",
@@ -28,7 +28,7 @@ export class ReposService {
             languageDisplayName: "JavaScript",
             startIndex: "## Package Managers",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/JavaScript.png"
         },
         {
             owner: "aleksandar-todorovic",
@@ -37,7 +37,7 @@ export class ReposService {
             languageDisplayName: "C",
             startIndex: "## Build Systems",
             endIndex: "[396]: http://pjreddie.com/darknet/",
-            image: "assets/images/iot.png"
+            image: "assets/images/C.png"
         },
         {
             owner: "fffaraz",
@@ -46,7 +46,7 @@ export class ReposService {
             languageDisplayName: "C/C++",
             startIndex: "## Standard Libraries",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/C++.png"
         },
         {
             owner: "akullpp",
@@ -55,7 +55,7 @@ export class ReposService {
             languageDisplayName: "Java",
             startIndex: "## Ancients",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/Java.png"
         },
         {
             owner: "markets",
@@ -64,7 +64,7 @@ export class ReposService {
             languageDisplayName: "Ruby",
             startIndex: "## Abstraction",
             endIndex: "# Other Awesome Lists",
-            image: "assets/images/iot.png"
+            image: "assets/images/Ruby.png"
         },
         {
             owner: "dzharii",
@@ -73,7 +73,7 @@ export class ReposService {
             languageDisplayName: "TypeScript",
             startIndex: "## Getting Started with (awesome) TypeScript",
             endIndex: "### Social",
-            image: "assets/images/iot.png"
+            image: "assets/images/TypeScript.png"
         },
         {
             owner: "peterkokot",
@@ -82,7 +82,7 @@ export class ReposService {
             languageDisplayName: "JQuery",
             startIndex: "## Resources",
             endIndex: "## Contributing and License",
-            image: "assets/images/iot.png"
+            image: "assets/images/JQuery.png"
         },
         {
             owner: "vinta",
@@ -91,7 +91,7 @@ export class ReposService {
             languageDisplayName: "Python",
             startIndex: "## Environment Management",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/Python.png"
         },
         {
             owner: "lauris",
@@ -100,7 +100,7 @@ export class ReposService {
             languageDisplayName: "Scala",
             startIndex: "## Database",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/Scala.png"
         },
         {
             owner: "kdabir",
@@ -109,7 +109,7 @@ export class ReposService {
             languageDisplayName: "Groovy",
             startIndex: "## Build tools and Setup",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/Groovy.png"
         },
         {
             owner: "AngularClass",
@@ -118,7 +118,7 @@ export class ReposService {
             languageDisplayName: "Angular 2",
             startIndex: "#### Official Resources",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/Angular2.png"
         },
         {
             owner: "gianarb",
@@ -127,7 +127,7 @@ export class ReposService {
             languageDisplayName: "Angular",
             startIndex: "## Seed Projects",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/Angular.png"
         },
         {
             owner: "enaqx",
@@ -136,7 +136,7 @@ export class ReposService {
             languageDisplayName: "React",
             startIndex: "#### React General Resources",
             endIndex: "### License",
-            image: "assets/images/iot.png"
+            image: "assets/images/React.png"
         },
         {
             owner: "sadcitizen",
@@ -145,7 +145,7 @@ export class ReposService {
             languageDisplayName: "Backbone",
             startIndex: "## General",
             endIndex: "- [Backbone.BabySitter](https://github.com/marionettejs/backbone.babysitter)",
-            image: "assets/images/iot.png"
+            image: "assets/images/Backbone.png"
         },
         {
             owner: "Urigo",
@@ -154,7 +154,7 @@ export class ReposService {
             languageDisplayName: "Meteor",
             startIndex: "## Getting Started",
             endIndex: "# [Contributing]",
-            image: "assets/images/iot.png"
+            image: "assets/images/Meteor.png"
         },
         {
             owner: "nmec",
@@ -163,7 +163,7 @@ export class ReposService {
             languageDisplayName: "Ember",
             startIndex: "## Examples",
             endIndex: "- [Adolfo Builes](https://twitter.com/abuiles)",
-            image: "assets/images/iot.png"
+            image: "assets/images/Ember.png"
         },
         {
             owner: "afonsopacifer",
@@ -172,7 +172,7 @@ export class ReposService {
             languageDisplayName: "Flexbox",
             startIndex: "## W3C Specification",
             endIndex: "## Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/flexbox.png"
         },
         {
             owner: "ChromeDevTools",
@@ -181,7 +181,7 @@ export class ReposService {
             languageDisplayName: "Chrome Dev Tools",
             startIndex: "## Learning",
             endIndex: "-perf Package.",
-            image: "assets/images/iot.png"
+            image: "assets/images/ChromeDevTools.png"
         },
         {
             owner: "candelibas",
@@ -190,7 +190,7 @@ export class ReposService {
             languageDisplayName: "Ionic 2",
             startIndex: "#### Official Resources",
             endIndex: "#### Contribute",
-            image: "assets/images/iot.png"
+            image: "assets/images/Ionic2.png"
         },
         {
             owner: "dnbard",
@@ -199,7 +199,7 @@ export class ReposService {
             languageDisplayName: "KnockoutJS",
             startIndex: "## Frameworks",
             endIndex: "using WebSockets and Knockout",
-            image: "assets/images/iot.png"
+            image: "assets/images/KnockoutJS.png"
         },
         {
             owner: "raphamorim",
@@ -208,7 +208,7 @@ export class ReposService {
             languageDisplayName: "Canvas",
             startIndex: "## Examples",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/Canvas.png"
         },
         {
             owner: "wbkd",
@@ -217,7 +217,7 @@ export class ReposService {
             languageDisplayName: "D3",
             startIndex: "## Charts",
             endIndex: "- An Atom package with d3 snippets",
-            image: "assets/images/iot.png"
+            image: "assets/images/D3.png"
         },
         {
             owner: "veggiemonk",
@@ -226,7 +226,7 @@ export class ReposService {
             languageDisplayName: "Docker",
             startIndex: "## Main Resources",
             endIndex: "## People",
-            image: "assets/images/iot.png"
+            image: "assets/images/Docker.png"
         },
         {
             owner: "ekremkaraca",
@@ -235,7 +235,7 @@ export class ReposService {
             languageDisplayName: "Rails",
             startIndex: "### Blogging",
             endIndex: "## Notes",
-            image: "assets/images/iot.png"
+            image: "assets/images/Rails.png"
         },
         {
             owner: "fcambus",
@@ -244,7 +244,7 @@ export class ReposService {
             languageDisplayName: "Nginx",
             startIndex: "## Understanding Nginx",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/nginx.png"
         },
         {
             owner: "dzharii",
@@ -253,7 +253,7 @@ export class ReposService {
             languageDisplayName: "Elastic Search",
             startIndex: "## Elastic Stack",
             endIndex: "# Contributing",
-            image: "assets/images/iot.png"
+            image: "assets/images/Elastic-Search.png"
         },
         {
             owner: "ramnes",
@@ -262,7 +262,7 @@ export class ReposService {
             languageDisplayName: "MongoDB",
             startIndex: "## Resources",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/MongoDB.png"
         },
         {
             owner: "d3viant0ne",
@@ -271,7 +271,7 @@ export class ReposService {
             languageDisplayName: "RethinkDB",
             startIndex: "RethinkDB Ecosystem",
             endIndex: "License",
-            image: "assets/images/iot.png"
+            image: "assets/images/RethinkDB.png"
         },
         {
             owner: "onurakpolat",
@@ -280,7 +280,7 @@ export class ReposService {
             languageDisplayName: "Big Data",
             startIndex: "## RDBMS",
             endIndex: "# Other Awesome Lists",
-            image: "assets/images/iot.png"
+            image: "assets/images/BigData.png"
         },
         {
             owner: "youngwookim",
@@ -289,7 +289,7 @@ export class ReposService {
             languageDisplayName: "Hadoop",
             startIndex: "## Hadoop",
             endIndex: "# Other Awesome Lists",
-            image: "assets/images/iot.png"
+            image: "assets/images/Hadoop.png"
         },
         {
             owner: "tayllan",
@@ -298,7 +298,7 @@ export class ReposService {
             languageDisplayName: "Algorithms",
             startIndex: "## Websites",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/Algorithms.png"
         },
         {
             owner: "christian-bromann",
@@ -307,7 +307,7 @@ export class ReposService {
             languageDisplayName: "Selenium",
             startIndex: "### Tools",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/Selenium.png"
         },
         {
             owner: "melvin0008",
@@ -316,7 +316,7 @@ export class ReposService {
             languageDisplayName: "Boilerplates",
             startIndex: "## Android Development",
             endIndex: "# [Contributing]",
-            image: "assets/images/iot.png"
+            image: "assets/images/Boilerplates.png"
         },
         {
             owner: "HQarroum",
@@ -325,7 +325,7 @@ export class ReposService {
             languageDisplayName: "Internet Of Things",
             startIndex: "### Hardware",
             endIndex: "## License",
-            image: "assets/images/iot.png"
+            image: "assets/images/IOT.png"
         }
     ];
 
