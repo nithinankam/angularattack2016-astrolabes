@@ -12,7 +12,7 @@ export class sideNavBarComponent {
     @Input()repos:any;
     @Output() toggleNavBar = new EventEmitter();
 
-    oggleNavBarOnClick() {
+    toggleNavBarOnClick() {
         this.navBarToggle = !this.navBarToggle;
         this.toggleNavBar.emit({
             value: this.navBarToggle
