@@ -1,0 +1,20 @@
+<select class="form-control" [(ngModel)]="selectedRepo" (ngModelChange)="navigateToLanguage($event)">
+    <option [value]="test">Select Language</option>
+    <option *ngFor="let repo of repos" [ngValue]="repo">
+        {{ repo.name }}
+    </option>
+</select>
+<br>
+<div class="row">
+    <div class="col-xs-4" *ngFor="let repo of repos">
+        <div class="panel panel-success text-center" (click)="navigateToLanguage(repo)">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{repo.name}}</h3>
+            </div>
+            <div class="panel-body">
+                Owner: {{repo.owner}}<br>
+                Repository Name: {{repo.repo}}
+            </div>
+        </div>
+    </div>
+</div>

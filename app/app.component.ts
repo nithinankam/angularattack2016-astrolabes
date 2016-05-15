@@ -1,55 +1,34 @@
 import {Component, OnInit} from '@angular/core';
-import {githubService} from './github.service';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+
+import {NavBarComponent} from './navbar.component';
+import {MyLanguageComponent} from './my-language.component';
+import {LanguageComponent} from './language.component'
 
 @Component({
     selector: 'my-app',
-    template: `
-        <select class="form-control" [(ngModel)]="selectedRepo" (ngModelChange)="reloadPosts($event)">
-            <option [value]="test">Select Language</option>
-            <option *ngFor="let repo of repos" [ngValue]="repo">
-                {{ repo.name }}
-            </option>
-        </select>
-        <br>
-        {{readmeData}}
-  `,
-    directives: [],
-    providers: [githubService]
+    template: `<navbar></navbar>`,
+    directives: [NavBarComponent, ROUTER_DIRECTIVES]
 })
-export class AppComponent implements OnInit {
-    repos:any[];
-    readmeData:string;
+@RouteConfig([
+    {
+        path: '/',
+        name: 'MyLanguage',
+        component: MyLanguageComponent,
+        useAsDefault: true
+    },
+    {
+        path: '/:repoName',
+        name: 'Language',
+        component: LanguageComponent
+    }
+])
 
-    constructor(private _githubService:githubService) {
+export class AppComponent implements OnInit {
+    constructor() {
     }
 
     ngOnInit() {
-        this.repos = [
-            {owner: "sindresorhus", repo: "awesome", name: "Main Awesome Repo"},
-            {owner: "gianarb", repo: "awesome-angularjs", name: "Angular"},
-            {owner: "AngularClass", repo: "awesome-angular2", name: "Angular2"},
-            {owner: "sadcitizen", repo: "awesome-backbone", name: "Backbone"},
-            {owner: "dnbard", repo: "awesome-knockout", name: "Knockout"},
-            {owner: "Urigo", repo: "awesome-meteor", name: "Meteor"},
-            {owner: "nmec", repo: "awesome-ember", name: "Ember"},
-            {owner: "behzad888", repo: "awesome-aurelia", name: "Aurelia"},
-            {owner: "lauris", repo: "awesome-scala", name: "Scala"}
-        ];
-
-        // main 'awesome' repo that points to each languages
-        this.reloadPosts(this.repos[0]);
     }
-
-    reloadPosts(label) {
-        this.readmeData = '';   // once user click on 'select language' dropdown
-        if (label.owner && label.repo) {
-            this._githubService.getReadme(label.owner, label.repo)
-                .subscribe(result => {
-                    this.readmeData = atob(result.content);
-                });
-        }
-
-    }
-
 
 }

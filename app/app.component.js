@@ -9,44 +9,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var github_service_1 = require('./github.service');
+var router_deprecated_1 = require('@angular/router-deprecated');
+var navbar_component_1 = require('./navbar.component');
+var my_language_component_1 = require('./my-language.component');
+var language_component_1 = require('./language.component');
 var AppComponent = (function () {
-    function AppComponent(_githubService) {
-        this._githubService = _githubService;
+    function AppComponent() {
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.repos = [
-            { owner: "sindresorhus", repo: "awesome", name: "Main Awesome Repo" },
-            { owner: "gianarb", repo: "awesome-angularjs", name: "Angular" },
-            { owner: "AngularClass", repo: "awesome-angular2", name: "Angular2" },
-            { owner: "sadcitizen", repo: "awesome-backbone", name: "Backbone" },
-            { owner: "dnbard", repo: "awesome-knockout", name: "Knockout" },
-            { owner: "Urigo", repo: "awesome-meteor", name: "Meteor" },
-            { owner: "nmec", repo: "awesome-ember", name: "Ember" },
-            { owner: "behzad888", repo: "awesome-aurelia", name: "Aurelia" },
-            { owner: "lauris", repo: "awesome-scala", name: "Scala" }
-        ];
-        // main 'awesome' repo that points to each languages
-        this.reloadPosts(this.repos[0]);
-    };
-    AppComponent.prototype.reloadPosts = function (label) {
-        var _this = this;
-        this.readmeData = ''; // once user click on 'select language' dropdown
-        if (label.owner && label.repo) {
-            this._githubService.getReadme(label.owner, label.repo)
-                .subscribe(function (result) {
-                _this.readmeData = atob(result.content);
-            });
-        }
     };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n        <select class=\"form-control\" [(ngModel)]=\"selectedRepo\" (ngModelChange)=\"reloadPosts($event)\">\n            <option [value]=\"test\">Select Language</option>\n            <option *ngFor=\"let repo of repos\" [ngValue]=\"repo\">\n                {{ repo.name }}\n            </option>\n        </select>\n        <br>\n        {{readmeData}}\n  ",
-            directives: [],
-            providers: [github_service_1.githubService]
-        }), 
-        __metadata('design:paramtypes', [github_service_1.githubService])
+            template: "<navbar></navbar>",
+            directives: [navbar_component_1.NavBarComponent, router_deprecated_1.ROUTER_DIRECTIVES]
+        }),
+        router_deprecated_1.RouteConfig([
+            {
+                path: '/',
+                name: 'MyLanguage',
+                component: my_language_component_1.MyLanguageComponent,
+                useAsDefault: true
+            },
+            {
+                path: '/:repoName',
+                name: 'Language',
+                component: language_component_1.LanguageComponent
+            }
+        ]), 
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
