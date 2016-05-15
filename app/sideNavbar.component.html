@@ -2,9 +2,9 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li *ngFor="let repo of repos"
-                [routerLink]="['Language', {repoName:repo.name}]"
+                [routerLink]="['Language', {languageName:repo.languageStateName}]"
                 (click)="toggleNavBarOnClick()">
-                <a>{{repo.name}}</a>
+                <a>{{repo.languageDisplayName}}</a>
             </li>
         </ul>
     </div>

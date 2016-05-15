@@ -28,8 +28,8 @@ export class MyLanguageComponent implements OnInit {
     }
 
     navigateToLanguage(selectedLanguage) {
-        if (selectedLanguage.name) {
-            this._router.navigate(['Language', {repoName: selectedLanguage.name}]);
+        if (selectedLanguage.languageStateName) {
+            this._router.navigate(['Language', {languageName: selectedLanguage.languageStateName}]);
         }
     }
 

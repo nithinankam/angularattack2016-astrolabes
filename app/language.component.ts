@@ -11,7 +11,7 @@ import {ReposService} from './repos.service';
     providers: [githubService, ReposService]
 })
 export class LanguageComponent implements OnInit {
-    repoName:string;
+    languageName:string;
     repoObject;
     md_content:any;
     html_content:any;
@@ -28,8 +28,8 @@ export class LanguageComponent implements OnInit {
 
         this.repos = this._reposService.getRepos();
 
-        this.repoName = this._routeParams.get('repoName');
-        this.repoObject = this._reposService.getRepo(this.repoName);
+        this.languageName = this._routeParams.get('languageName');
+        this.repoObject = this._reposService.getLanguage(this.languageName);
         if (this.repoObject[0]) {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(result => {

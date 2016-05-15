@@ -32,7 +32,7 @@ var AppComponent = (function () {
                 useAsDefault: true
             },
             {
-                path: '/:repoName',
+                path: '/:languageName',
                 name: 'Language',
                 component: language_component_1.LanguageComponent
             },

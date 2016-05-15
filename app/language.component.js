@@ -23,8 +23,8 @@ var LanguageComponent = (function () {
         var _this = this;
         var marked = require('marked');
         this.repos = this._reposService.getRepos();
-        this.repoName = this._routeParams.get('repoName');
-        this.repoObject = this._reposService.getRepo(this.repoName);
+        this.languageName = this._routeParams.get('languageName');
+        this.repoObject = this._reposService.getLanguage(this.languageName);
         if (this.repoObject[0]) {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(function (result) {

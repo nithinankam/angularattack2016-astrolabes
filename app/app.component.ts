@@ -18,7 +18,7 @@ import {LanguageComponent} from './language.component'
         useAsDefault: true
     },
     {
-        path: '/:repoName',
+        path: '/:languageName',
         name: 'Language',
         component: LanguageComponent
     },

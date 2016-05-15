@@ -26,8 +26,8 @@ var MyLanguageComponent = (function () {
         this.paginatedRepos = _.take(this.repos, this.pageSize);
     };
     MyLanguageComponent.prototype.navigateToLanguage = function (selectedLanguage) {
-        if (selectedLanguage.name) {
-            this._router.navigate(['Language', { repoName: selectedLanguage.name }]);
+        if (selectedLanguage.languageStateName) {
+            this._router.navigate(['Language', { languageName: selectedLanguage.languageStateName }]);
         }
     };
     MyLanguageComponent.prototype.onPageChanged = function (page) {
