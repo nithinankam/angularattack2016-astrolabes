@@ -31,7 +31,6 @@ var MyLanguageComponent = (function () {
             templateUrl: 'app/my-language.component.html',
             directives: [],
             providers: [github_service_1.githubService, repos_service_1.ReposService],
-            //styles: ['.panel {transition: padding 0.5s;}'],
             styleUrls: ['app/my-language.component.css']
         }), 
         __metadata('design:paramtypes', [repos_service_1.ReposService, router_deprecated_1.Router])
