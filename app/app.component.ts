@@ -21,6 +21,11 @@ import {LanguageComponent} from './language.component'
         path: '/:repoName',
         name: 'Language',
         component: LanguageComponent
+    },
+    {
+        path: '/*others',
+        name: 'Others',
+        redirectTo: ['MyLanguage']
     }
 ])
 

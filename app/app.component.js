@@ -35,6 +35,11 @@ var AppComponent = (function () {
                 path: '/:repoName',
                 name: 'Language',
                 component: language_component_1.LanguageComponent
+            },
+            {
+                path: '/*others',
+                name: 'Others',
+                redirectTo: ['MyLanguage']
             }
         ]), 
         __metadata('design:paramtypes', [])

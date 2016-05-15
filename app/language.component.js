@@ -10,37 +10,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var router_deprecated_2 = require('@angular/router-deprecated');
 var github_service_1 = require('./github.service');
 var repos_service_1 = require('./repos.service');
 var LanguageComponent = (function () {
-    function LanguageComponent(_githubService, _reposService, _roteParams) {
+    function LanguageComponent(_githubService, _reposService, _routeParams, _router) {
         this._githubService = _githubService;
         this._reposService = _reposService;
-        this._roteParams = _roteParams;
+        this._routeParams = _routeParams;
+        this._router = _router;
     }
     LanguageComponent.prototype.ngOnInit = function () {
         var _this = this;
         var marked = require('marked');
         this.repos = this._reposService.getRepos();
-        if (this._roteParams.get('repoName')) {
-            this.repoName = this._roteParams.get('repoName');
-            this.repoObject = this._reposService.getRepo(this.repoName);
+        this.repoName = this._routeParams.get('repoName');
+        this.repoObject = this._reposService.getRepo(this.repoName);
+        if (this.repoObject[0]) {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(function (result) {
                 _this.md_content = atob(result.content);
                 _this.html_content = marked(_this.md_content);
             });
         }
+        else {
+            this._router.navigate(['MyLanguage']);
+        }
     };
     LanguageComponent = __decorate([
         core_1.Component({
             selector: 'language',
             template: "<div [innerHtml]=\"html_content\"></div>",
-            directives: [router_deprecated_2.ROUTER_DIRECTIVES],
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 
-        __metadata('design:paramtypes', [github_service_1.githubService, repos_service_1.ReposService, router_deprecated_1.RouteParams])
+        __metadata('design:paramtypes', [github_service_1.githubService, repos_service_1.ReposService, router_deprecated_1.RouteParams, router_deprecated_1.Router])
     ], LanguageComponent);
     return LanguageComponent;
 }());
