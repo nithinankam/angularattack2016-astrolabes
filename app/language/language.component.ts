@@ -1,8 +1,8 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {RouteParams, Router, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
-import {githubService} from './github.service';
-import {ReposService} from './repos.service';
+import {githubService} from './../shared/github/github.service';
+import {ReposService} from './../shared/repos/repos.service';
 
 @Component({
     selector: 'language',
@@ -10,9 +10,10 @@ import {ReposService} from './repos.service';
     directives: [ROUTER_DIRECTIVES],
     providers: [githubService, ReposService]
 })
+
 export class LanguageComponent implements OnInit {
     languageName:string;
-    pageHeading: string;
+    pageHeading:string;
     repoObject;
     md_content:any;
     html_content:any;
@@ -41,16 +42,16 @@ export class LanguageComponent implements OnInit {
                     this.startIndex = this.md_content.indexOf(this.repoObject[0].startIndex);
                     this.endIndex = this.md_content.indexOf(this.repoObject[0].endIndex);
 
-                    if(this.startIndex != -1 && this.endIndex != -1 && this.startIndex!= this.endIndex) {
+                    if (this.startIndex != -1 && this.endIndex != -1 && this.startIndex != this.endIndex) {
                         this.parsed_md_content = this.md_content.slice(this.startIndex, this.endIndex);
                         this.html_content = marked(this.parsed_md_content);
-                    }else{
+                    } else {
                         this.html_content = marked(this.md_content);
                     }
                 });
 
         } else {
-            this._router.navigate(['MyLanguage']);
+            this._router.navigate(['AllLanguages']);
         }
     }
 

@@ -224,7 +224,7 @@ var ReposService = (function () {
                 owner: "fcambus",
                 repo: "nginx-resources",
                 languageStateName: "nginx",
-                languageDisplayName: "nginx",
+                languageDisplayName: "Nginx",
                 startIndex: "## Understanding Nginx",
                 endIndex: "## License"
             },
@@ -256,7 +256,7 @@ var ReposService = (function () {
                 owner: "onurakpolat",
                 repo: "awesome-bigdata",
                 languageStateName: "BigData",
-                languageDisplayName: "BigData",
+                languageDisplayName: "Big Data",
                 startIndex: "## RDBMS",
                 endIndex: "# Other Awesome Lists"
             },

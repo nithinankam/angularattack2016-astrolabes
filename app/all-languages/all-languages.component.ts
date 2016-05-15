@@ -1,19 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
-
-import {githubService} from './github.service';
-import {ReposService} from './repos.service'
-import {PaginationComponent} from './pagination.component'
 import * as _ from 'lodash';
+
+import {githubService} from './../shared/github/github.service';
+import {ReposService} from './../shared/repos/repos.service'
+import {PaginationComponent} from './../shared/pagination/pagination.component'
 
 @Component({
     selector: 'my-language',
-    templateUrl: 'app/my-language.component.html',
+    templateUrl: 'app/all-languages/all-languages.component.html',
     directives: [PaginationComponent],
     providers: [githubService, ReposService],
-    styleUrls: ['app/my-language.component.css']
+    styleUrls: ['app/all-languages/all-languages.component.css']
 })
-export class MyLanguageComponent implements OnInit {
+
+export class AllLanguagesComponent implements OnInit {
     repos:any[];
     paginatedRepos = [];
     pageSize = 12;

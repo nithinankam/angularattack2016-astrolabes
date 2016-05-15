@@ -1,16 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
-import {ReposService} from './repos.service';
-import {sideNavBarComponent} from './sideNavbar.component'
+import {ReposService} from './../shared/repos/repos.service';
+import {sideNavBarComponent} from './../side-navbar/side-navbar.component'
 
 @Component({
     selector: 'navbar',
-    templateUrl: 'app/navbar.component.html',
+    templateUrl: 'app/navbar/navbar.component.html',
     directives: [ROUTER_DIRECTIVES, sideNavBarComponent],
-    styleUrls: ['app/navbar.component.css'],
+    styleUrls: ['app/navbar/navbar.component.css'],
     providers: [ReposService]
 })
+
 export class NavBarComponent implements OnInit {
     repos:any[];
     defaultToggle = true;

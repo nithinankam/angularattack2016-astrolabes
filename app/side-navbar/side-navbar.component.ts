@@ -3,10 +3,10 @@ import {ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 @Component({
     selector: 'side-navbar',
-    templateUrl: 'app/sideNavbar.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    providers: []
+    templateUrl: 'app/side-navbar/side-navbar.component.html',
+    directives: [ROUTER_DIRECTIVES]
 })
+
 export class sideNavBarComponent {
     @Input()navBarToggle;
     @Input()repos:any;

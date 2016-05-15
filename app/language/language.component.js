@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var github_service_1 = require('./github.service');
-var repos_service_1 = require('./repos.service');
+var github_service_1 = require('./../shared/github/github.service');
+var repos_service_1 = require('./../shared/repos/repos.service');
 var LanguageComponent = (function () {
     function LanguageComponent(_githubService, _reposService, _routeParams, _router) {
         this._githubService = _githubService;
@@ -42,7 +42,7 @@ var LanguageComponent = (function () {
             });
         }
         else {
-            this._router.navigate(['MyLanguage']);
+            this._router.navigate(['AllLanguages']);
         }
     };
     LanguageComponent = __decorate([

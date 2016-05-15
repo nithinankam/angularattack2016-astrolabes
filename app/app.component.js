@@ -10,9 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var navbar_component_1 = require('./navbar.component');
-var my_language_component_1 = require('./my-language.component');
-var language_component_1 = require('./language.component');
+var navbar_component_1 = require('./navbar/navbar.component');
+var all_languages_component_1 = require('./all-languages/all-languages.component');
+var language_component_1 = require('./language/language.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -27,8 +27,8 @@ var AppComponent = (function () {
         router_deprecated_1.RouteConfig([
             {
                 path: '/',
-                name: 'MyLanguage',
-                component: my_language_component_1.MyLanguageComponent,
+                name: 'AllLanguages',
+                component: all_languages_component_1.AllLanguagesComponent,
                 useAsDefault: true
             },
             {
@@ -39,7 +39,7 @@ var AppComponent = (function () {
             {
                 path: '/*others',
                 name: 'Others',
-                redirectTo: ['MyLanguage']
+                redirectTo: ['AllLanguages']
             }
         ]), 
         __metadata('design:paramtypes', [])

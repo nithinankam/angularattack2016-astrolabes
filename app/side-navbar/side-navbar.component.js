@@ -35,13 +35,12 @@ var sideNavBarComponent = (function () {
     sideNavBarComponent = __decorate([
         core_1.Component({
             selector: 'side-navbar',
-            templateUrl: 'app/sideNavbar.component.html',
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
-            providers: []
+            templateUrl: 'app/side-navbar/side-navbar.component.html',
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [])
     ], sideNavBarComponent);
     return sideNavBarComponent;
 }());
 exports.sideNavBarComponent = sideNavBarComponent;
-//# sourceMappingURL=sideNavbar.component.js.map
+//# sourceMappingURL=side-navbar.component.js.map

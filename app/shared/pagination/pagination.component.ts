@@ -16,6 +16,7 @@ import {Component, Input, OnChanges, Output, EventEmitter} from '@angular/core';
     </ul>
     </nav>`
 })
+
 export class PaginationComponent implements OnChanges {
     @Input() items = [];
     @Input('page-size') pageSize = 10;

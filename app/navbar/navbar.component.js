@@ -10,8 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
-var repos_service_1 = require('./repos.service');
-var sideNavbar_component_1 = require('./sideNavbar.component');
+var repos_service_1 = require('./../shared/repos/repos.service');
+var side_navbar_component_1 = require('./../side-navbar/side-navbar.component');
 var NavBarComponent = (function () {
     function NavBarComponent(_reposService) {
         this._reposService = _reposService;
@@ -29,9 +29,9 @@ var NavBarComponent = (function () {
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'navbar',
-            templateUrl: 'app/navbar.component.html',
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES, sideNavbar_component_1.sideNavBarComponent],
-            styleUrls: ['app/navbar.component.css'],
+            templateUrl: 'app/navbar/navbar.component.html',
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES, side_navbar_component_1.sideNavBarComponent],
+            styleUrls: ['app/navbar/navbar.component.css'],
             providers: [repos_service_1.ReposService]
         }), 
         __metadata('design:paramtypes', [repos_service_1.ReposService])

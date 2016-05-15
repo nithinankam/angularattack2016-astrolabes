@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core'
 
-
 @Injectable()
 export class ReposService {
     private repos = [
@@ -216,7 +215,7 @@ export class ReposService {
             owner: "fcambus",
             repo: "nginx-resources",
             languageStateName: "nginx",
-            languageDisplayName: "nginx",
+            languageDisplayName: "Nginx",
             startIndex: "## Understanding Nginx",
             endIndex: "## License"
         },
@@ -248,7 +247,7 @@ export class ReposService {
             owner: "onurakpolat",
             repo: "awesome-bigdata",
             languageStateName: "BigData",
-            languageDisplayName: "BigData",
+            languageDisplayName: "Big Data",
             startIndex: "## RDBMS",
             endIndex: "# Other Awesome Lists"
         },
