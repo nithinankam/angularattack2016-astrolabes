@@ -6,15 +6,18 @@
 </select>
 <br>
 <div class="row">
-    <div class="col-xs-4" *ngFor="let repo of repos">
+    <div class="col-xs-4" *ngFor="let repo of paginatedRepos">
         <div class="panel panel-success text-center" (click)="navigateToLanguage(repo)">
             <div class="panel-heading">
                 <h3 class="panel-title">{{repo.name}}</h3>
             </div>
             <div class="panel-body">
-                Owner: {{repo.owner}}<br>
-                Repository Name: {{repo.repo}}
+                <p>Owner: {{repo.owner}}</p>
+                <p>Repository Name: {{repo.repo}}</p>
             </div>
         </div>
     </div>
+</div>
+<div class="col-xs-6 col-xs-offset-3 text-center">
+    <pagination [items]="repos" [page-size]="pageSize" (page-changed)="onPageChanged($event)"></pagination>
 </div>

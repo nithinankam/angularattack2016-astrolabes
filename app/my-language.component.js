@@ -12,24 +12,33 @@ var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var github_service_1 = require('./github.service');
 var repos_service_1 = require('./repos.service');
+var pagination_component_1 = require('./pagination.component');
+var _ = require('lodash');
 var MyLanguageComponent = (function () {
     function MyLanguageComponent(_reposService, _router) {
         this._reposService = _reposService;
         this._router = _router;
+        this.paginatedRepos = [];
+        this.pageSize = 12;
     }
     MyLanguageComponent.prototype.ngOnInit = function () {
         this.repos = this._reposService.getRepos();
+        this.paginatedRepos = _.take(this.repos, this.pageSize);
     };
     MyLanguageComponent.prototype.navigateToLanguage = function (selectedLanguage) {
         if (selectedLanguage.name) {
             this._router.navigate(['Language', { repoName: selectedLanguage.name }]);
         }
     };
+    MyLanguageComponent.prototype.onPageChanged = function (page) {
+        var startIndex = (page - 1) * this.pageSize;
+        this.paginatedRepos = _.take(_.drop(this.repos, startIndex), this.pageSize);
+    };
     MyLanguageComponent = __decorate([
         core_1.Component({
             selector: 'my-language',
             templateUrl: 'app/my-language.component.html',
-            directives: [],
+            directives: [pagination_component_1.PaginationComponent],
             providers: [github_service_1.githubService, repos_service_1.ReposService],
             styleUrls: ['app/my-language.component.css']
         }), 
