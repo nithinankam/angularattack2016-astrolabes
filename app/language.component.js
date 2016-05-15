@@ -29,7 +29,15 @@ var LanguageComponent = (function () {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(function (result) {
                 _this.md_content = atob(result.content);
-                _this.html_content = marked(_this.md_content);
+                _this.startIndex = _this.md_content.indexOf(_this.repoObject[0].startIndex);
+                _this.endIndex = _this.md_content.indexOf(_this.repoObject[0].endIndex);
+                if (_this.startIndex != -1 && _this.endIndex != -1 && _this.startIndex != _this.endIndex) {
+                    _this.parsed_md_content = _this.md_content.slice(_this.startIndex, _this.endIndex);
+                    _this.html_content = marked(_this.parsed_md_content);
+                }
+                else {
+                    _this.html_content = marked(_this.md_content);
+                }
             });
         }
         else {
