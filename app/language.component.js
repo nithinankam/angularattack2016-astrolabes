@@ -40,7 +40,7 @@ var LanguageComponent = (function () {
     LanguageComponent = __decorate([
         core_1.Component({
             selector: 'language',
-            template: "\n    <div id=\"wrapper\" [ngClass]=\"{toggled:toggle}\">\n        <div id=\"sidebar-wrapper\">\n            <ul class=\"sidebar-nav\">\n                <li class=\"sidebar-brand\">\n                   <a>Sidebar</a>\n                </li>\n                <li *ngFor=\"let repo of repos\" [routerLink]=\"['Language', {repoName:repo.name}]\">\n                    <a>{{repo.name}}</a>\n                </li>\n            </ul>\n        </div>\n        <div id=\"page-content-wrapper\">\n            <div class=\"container-fluid\">\n              <a class=\"btn btn-default\" id=\"menu-toggle\" (click)=\"clickedIt()\">Toggle Menu</a>\n              <div [innerHtml]=\"html_content\"></div>\n            </div>\n        </div>\n    ",
+            templateUrl: 'app/language.component.html',
             directives: [router_deprecated_2.ROUTER_DIRECTIVES],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 
