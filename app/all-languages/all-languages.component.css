@@ -6,6 +6,10 @@
     transform: scale(0.90);
 }
 
+.panel-success {
+    border-color: #2c3e50;
+}
+
 .dropdown {
     border-color: #2c3e50;
 }

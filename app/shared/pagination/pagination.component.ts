@@ -2,19 +2,8 @@ import {Component, Input, OnChanges, Output, EventEmitter} from '@angular/core';
 
 @Component({
     selector: 'pagination',
-    template: `
-    <nav *ngIf="items.length > pageSize">
-    <ul class="pagination">
-        <li [class.disabled]="currentPage == 1" (click)="previous()">
-            <span>&laquo;</span>
-        </li>
-        <li [class.active]="currentPage == page" *ngFor="let page of pages" (click)="changePage(page)">
-            <a>{{page}}</a>
-        <li [class.disabled]="currentPage == pages.length" (click)="next()">
-            <span>&raquo;</span>
-        </li>
-    </ul>
-    </nav>`
+    templateUrl: 'app/shared/pagination/pagination.component.html',
+    styleUrls: ['app/shared/pagination/pagination.component.css'],
 })
 
 export class PaginationComponent implements OnChanges {
