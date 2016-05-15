@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RouteConfig, ROUTER_DIRECTIVES, Router} from '@angular/router-deprecated';
+import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 import {NavBarComponent} from './navbar.component';
 import {MyLanguageComponent} from './my-language.component';
@@ -13,7 +13,7 @@ import {LanguageComponent} from './language.component'
             <router-outlet></router-outlet>
         </div>
         `,
-    directives: [NavBarComponent, ROUTER_DIRECTIVES],
+    directives: [NavBarComponent, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     {

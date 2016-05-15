@@ -22,7 +22,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             template: "\n        <navbar></navbar>\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n        ",
-            directives: [navbar_component_1.NavBarComponent, router_deprecated_1.ROUTER_DIRECTIVES],
+            directives: [navbar_component_1.NavBarComponent, router_deprecated_1.ROUTER_DIRECTIVES]
         }),
         router_deprecated_1.RouteConfig([
             {

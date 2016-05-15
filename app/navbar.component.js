@@ -10,16 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
+var repos_service_1 = require('./repos.service');
 var NavBarComponent = (function () {
-    function NavBarComponent() {
+    function NavBarComponent(_reposService) {
+        this._reposService = _reposService;
     }
+    NavBarComponent.prototype.ngOnInit = function () {
+        this.repos = this._reposService.getRepos();
+    };
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'navbar',
             templateUrl: 'app/navbar.component.html',
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            providers: [repos_service_1.ReposService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [repos_service_1.ReposService])
     ], NavBarComponent);
     return NavBarComponent;
 }());
