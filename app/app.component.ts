@@ -13,7 +13,8 @@ import {LanguageComponent} from './language.component'
             <router-outlet></router-outlet>
         </div>
         `,
-    directives: [NavBarComponent, ROUTER_DIRECTIVES]
+    directives: [NavBarComponent, ROUTER_DIRECTIVES],
+    styles: ['.container { margin-top: 60px}']
 })
 @RouteConfig([
     {
