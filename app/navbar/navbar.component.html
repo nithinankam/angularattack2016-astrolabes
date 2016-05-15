@@ -5,6 +5,7 @@
                 <i class="fa fa-2x" [ngClass]="{'fa-arrow-right': defaultToggle, 'fa-arrow-left': !defaultToggle}"></i>
             </a>
             <a class="navbar-brand" [routerLink]="['AllLanguages']" (click)="defaultToggle=true">Awesome Library</a>
+            <a class="nav navbar-nav navbar-right" [routerLink]="['AllLanguages']" (click)="defaultToggle=true">Home</a>
         </div>
     </div>
 </nav>

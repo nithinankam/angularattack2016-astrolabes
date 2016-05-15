@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-12">
-        <select class="form-control" [(ngModel)]="selectedRepo" (ngModelChange)="navigateToLanguage($event)">
+        <select class="form-control dropdown" [(ngModel)]="selectedRepo" (ngModelChange)="navigateToLanguage($event)">
             <option [value]="test">Select Language</option>
             <option *ngFor="let repo of repos" [ngValue]="repo">
                 {{ repo.languageDisplayName }}

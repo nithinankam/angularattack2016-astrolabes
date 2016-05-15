@@ -5,3 +5,13 @@
 .panel:hover {
     transform: scale(0.90);
 }
+
+.dropdown {
+    border-color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100%;
+    }
+}
