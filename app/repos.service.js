@@ -39,7 +39,7 @@ var ReposService = (function () {
             { owner: "veggiemonk", repo: "awesome-docker", name: "Docker" },
             { owner: "ekremkaraca", repo: "awesome-rails", name: "Rails" },
             { owner: "fcambus", repo: "nginx-resources", name: "nginx" },
-            { owner: "shlomi-noach", repo: "awesome-mysql", name: "MySQL" },
+            { owner: "dzharii", repo: "awesome-elasticsearch", name: "Elastic-Search" },
             { owner: "ramnes", repo: "awesome-mongodb", name: "MongoDB" },
             { owner: "d3viant0ne", repo: "awesome-rethinkdb", name: "RethinkDB" },
             { owner: "onurakpolat", repo: "awesome-bigdata", name: "BigData" },

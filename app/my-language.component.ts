@@ -8,7 +8,8 @@ import {ReposService} from './repos.service'
     selector: 'my-language',
     templateUrl: 'app/my-language.component.html',
     directives: [],
-    providers: [githubService, ReposService]
+    providers: [githubService, ReposService],
+    styleUrls: ['app/my-language.component.css']
 })
 export class MyLanguageComponent implements OnInit {
     repos:any[];
