@@ -31,7 +31,7 @@ var NavBarComponent = (function () {
             selector: 'navbar',
             templateUrl: 'app/navbar.component.html',
             directives: [router_deprecated_1.ROUTER_DIRECTIVES, sideNavbar_component_1.sideNavBarComponent],
-            styles: ['.navbar-default { margin-bottom: 0; border-radius: 0}'],
+            styleUrls: ['app/navbar.component.css'],
             providers: [repos_service_1.ReposService]
         }), 
         __metadata('design:paramtypes', [repos_service_1.ReposService])

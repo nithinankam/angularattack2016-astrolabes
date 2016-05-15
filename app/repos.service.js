@@ -129,7 +129,7 @@ var ReposService = (function () {
                 repo: "awesome-react",
                 languageStateName: "React",
                 languageDisplayName: "React",
-                startIndex: "### React",
+                startIndex: "#### React General Resources",
                 endIndex: "### License"
             },
             {

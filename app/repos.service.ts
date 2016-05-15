@@ -121,7 +121,7 @@ export class ReposService {
             repo: "awesome-react",
             languageStateName: "React",
             languageDisplayName: "React",
-            startIndex: "### React",
+            startIndex: "#### React General Resources",
             endIndex: "### License"
         },
         {

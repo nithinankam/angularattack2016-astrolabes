@@ -25,6 +25,7 @@ var LanguageComponent = (function () {
         this.repos = this._reposService.getRepos();
         this.languageName = this._routeParams.get('languageName');
         this.repoObject = this._reposService.getLanguage(this.languageName);
+        this.pageHeading = this.repoObject[0].languageDisplayName;
         if (this.repoObject[0]) {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(function (result) {
@@ -47,7 +48,7 @@ var LanguageComponent = (function () {
     LanguageComponent = __decorate([
         core_1.Component({
             selector: 'language',
-            template: "<div [innerHtml]=\"html_content\"></div>",
+            template: "<h1>{{pageHeading}}</h1><div [innerHtml]=\"html_content\"></div>",
             directives: [router_deprecated_1.ROUTER_DIRECTIVES],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 

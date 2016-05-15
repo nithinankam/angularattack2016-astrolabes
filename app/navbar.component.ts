@@ -8,7 +8,7 @@ import {sideNavBarComponent} from './sideNavbar.component'
     selector: 'navbar',
     templateUrl: 'app/navbar.component.html',
     directives: [ROUTER_DIRECTIVES, sideNavBarComponent],
-    styles: ['.navbar-default { margin-bottom: 0; border-radius: 0}'],
+    styleUrls: ['app/navbar.component.css'],
     providers: [ReposService]
 })
 export class NavBarComponent implements OnInit {

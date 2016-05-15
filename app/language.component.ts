@@ -6,12 +6,13 @@ import {ReposService} from './repos.service';
 
 @Component({
     selector: 'language',
-    template: `<div [innerHtml]="html_content"></div>`,
+    template: `<h1>{{pageHeading}}</h1><div [innerHtml]="html_content"></div>`,
     directives: [ROUTER_DIRECTIVES],
     providers: [githubService, ReposService]
 })
 export class LanguageComponent implements OnInit {
     languageName:string;
+    pageHeading: string;
     repoObject;
     md_content:any;
     html_content:any;
@@ -32,6 +33,7 @@ export class LanguageComponent implements OnInit {
         this.repos = this._reposService.getRepos();
         this.languageName = this._routeParams.get('languageName');
         this.repoObject = this._reposService.getLanguage(this.languageName);
+        this.pageHeading = this.repoObject[0].languageDisplayName;
         if (this.repoObject[0]) {
             this._githubService.getReadme(this.repoObject[0].owner, this.repoObject[0].repo)
                 .subscribe(result => {
