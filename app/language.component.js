@@ -18,7 +18,6 @@ var LanguageComponent = (function () {
         this._githubService = _githubService;
         this._reposService = _reposService;
         this._roteParams = _roteParams;
-        this.toggle = true;
     }
     LanguageComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -34,13 +33,10 @@ var LanguageComponent = (function () {
             });
         }
     };
-    LanguageComponent.prototype.clickedIt = function () {
-        this.toggle = !this.toggle;
-    };
     LanguageComponent = __decorate([
         core_1.Component({
             selector: 'language',
-            templateUrl: 'app/language.component.html',
+            template: "<div [innerHtml]=\"html_content\"></div>",
             directives: [router_deprecated_2.ROUTER_DIRECTIVES],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 

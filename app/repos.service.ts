@@ -19,9 +19,9 @@ export class ReposService {
         return this.repos;
     }
 
-    getRepo(id) {
-        var result = this.repos.filter(function( obj ) {
-            return obj.name == id;
+    getRepo(name) {
+        var result = this.repos.filter(function (obj) {
+            return obj.name == name;
         });
         return result;
     }

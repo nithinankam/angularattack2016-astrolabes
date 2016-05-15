@@ -26,9 +26,9 @@ var ReposService = (function () {
     ReposService.prototype.getRepos = function () {
         return this.repos;
     };
-    ReposService.prototype.getRepo = function (id) {
+    ReposService.prototype.getRepo = function (name) {
         var result = this.repos.filter(function (obj) {
-            return obj.name == id;
+            return obj.name == name;
         });
         return result;
     };

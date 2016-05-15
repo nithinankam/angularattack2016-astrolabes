@@ -11,18 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
 var repos_service_1 = require('./repos.service');
+var sideNavbar_component_1 = require('./sideNavbar.component');
 var NavBarComponent = (function () {
     function NavBarComponent(_reposService) {
         this._reposService = _reposService;
+        this.defaultToggle = true;
     }
     NavBarComponent.prototype.ngOnInit = function () {
         this.repos = this._reposService.getRepos();
+    };
+    NavBarComponent.prototype.onToggleClick = function () {
+        this.defaultToggle = !this.defaultToggle;
+    };
+    NavBarComponent.prototype.myToggleNavBarChanges = function ($event) {
+        this.defaultToggle = $event.value;
     };
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'navbar',
             templateUrl: 'app/navbar.component.html',
-            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES, sideNavbar_component_1.sideNavBarComponent],
             styles: ['.navbar-default { margin-bottom: 0; border-radius: 0}'],
             providers: [repos_service_1.ReposService]
         }), 

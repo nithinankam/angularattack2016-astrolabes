@@ -7,14 +7,8 @@ import {LanguageComponent} from './language.component'
 
 @Component({
     selector: 'my-app',
-    template: `
-        <navbar></navbar>
-        <div class="container">
-            <router-outlet></router-outlet>
-        </div>
-        `,
-    directives: [NavBarComponent, ROUTER_DIRECTIVES],
-    styles: ['.container { margin-top: 60px}']
+    template: `<navbar></navbar>`,
+    directives: [NavBarComponent, ROUTER_DIRECTIVES]
 })
 @RouteConfig([
     {

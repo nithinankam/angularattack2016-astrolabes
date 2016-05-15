@@ -20,9 +20,9 @@ var MyLanguageComponent = (function () {
     MyLanguageComponent.prototype.ngOnInit = function () {
         this.repos = this._reposService.getRepos();
     };
-    MyLanguageComponent.prototype.reloadPosts = function (selectedLabel) {
-        if (selectedLabel.name) {
-            this._router.navigate(['Language', { repoName: selectedLabel.name }]);
+    MyLanguageComponent.prototype.navigateToLanguage = function (selectedLanguage) {
+        if (selectedLanguage.name) {
+            this._router.navigate(['Language', { repoName: selectedLanguage.name }]);
         }
     };
     MyLanguageComponent = __decorate([

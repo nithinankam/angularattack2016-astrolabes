@@ -1,19 +1,19 @@
-<div id="wrapper" [ngClass]="{toggled:toggle}">
+<div id="wrapper" [ngClass]="{toggled:navBarToggle}">
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
                 <a>Sidebar</a>
             </li>
-            <li *ngFor="let repo of repos" [routerLink]="['Language', {repoName:repo.name}]">
+            <li *ngFor="let repo of repos"
+                [routerLink]="['Language', {repoName:repo.name}]"
+                (click)="toggleNavBarOnClick()">
                 <a>{{repo.name}}</a>
             </li>
         </ul>
     </div>
     <div id="page-content-wrapper">
         <div class="container-fluid">
-            <a class="btn btn-default" id="menu-toggle" (click)="clickedIt()">Toggle Menu</a>
-
-            <div [innerHtml]="html_content"></div>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

@@ -1,28 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" [routerLink]="['MyLanguage']">Awesome Library</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" [ngClass]="{open: dropdownOpen}">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button">
-                        Change Language <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li *ngFor="let repo of repos" [routerLink]="['Language', {repoName:repo.name}]"><a>{{repo.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <a class="navbar-brand" (click)="onToggleClick()">
+                <i class="fa" [ngClass]="{'fa-arrow-right': defaultToggle, 'fa-arrow-left': !defaultToggle}"></i></a>
+            <a class="navbar-brand" [routerLink]="['MyLanguage']" (click)="defaultToggle=true">Awesome Library</a>
         </div>
     </div>
-    <!-- /.container-fluid -->
 </nav>
+<side-navbar [navBarToggle]="defaultToggle"
+             [repos]="repos"
+             (toggleNavBar)="myToggleNavBarChanges($event)"></side-navbar>
 

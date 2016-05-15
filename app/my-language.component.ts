@@ -21,9 +21,9 @@ export class MyLanguageComponent implements OnInit {
         this.repos = this._reposService.getRepos();
     }
 
-    reloadPosts(selectedLabel) {
-        if (selectedLabel.name) {
-            this._router.navigate(['Language', {repoName: selectedLabel.name}]);
+    navigateToLanguage(selectedLanguage) {
+        if (selectedLanguage.name) {
+            this._router.navigate(['Language', {repoName: selectedLanguage.name}]);
         }
 
     }

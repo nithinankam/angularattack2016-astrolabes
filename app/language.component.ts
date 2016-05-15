@@ -1,14 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {RouteParams} from '@angular/router-deprecated';
 import {ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
-
 import {githubService} from './github.service';
-import {ReposService} from './repos.service'
+import {ReposService} from './repos.service';
 
 @Component({
     selector: 'language',
-    templateUrl: 'app/language.component.html',
+    template: `<div [innerHtml]="html_content"></div>`,
     directives: [ROUTER_DIRECTIVES],
     providers: [githubService, ReposService]
 })
@@ -17,7 +16,6 @@ export class LanguageComponent implements OnInit {
     repoObject;
     md_content:any;
     html_content:any;
-    toggle = true;
     repos:any;
 
     constructor(private _githubService:githubService,
@@ -41,8 +39,4 @@ export class LanguageComponent implements OnInit {
         }
     }
 
-    clickedIt() {
-        this.toggle = !this.toggle;
-
-    }
 }
