@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 
 import {NavBarComponent} from './navbar/navbar.component';
@@ -30,11 +30,5 @@ import {LanguageComponent} from './language/language.component'
     }
 ])
 
-export class AppComponent implements OnInit {
-    constructor() {
-    }
-
-    ngOnInit() {
-    }
-
+export class AppComponent{
 }
