@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_deprecated_1 = require('@angular/router-deprecated');
+var router_deprecated_2 = require('@angular/router-deprecated');
 var github_service_1 = require('./github.service');
 var repos_service_1 = require('./repos.service');
 var LanguageComponent = (function () {
@@ -17,10 +18,12 @@ var LanguageComponent = (function () {
         this._githubService = _githubService;
         this._reposService = _reposService;
         this._roteParams = _roteParams;
+        this.toggle = true;
     }
     LanguageComponent.prototype.ngOnInit = function () {
         var _this = this;
         var marked = require('marked');
+        this.repos = this._reposService.getRepos();
         if (this._roteParams.get('repoName')) {
             this.repoName = this._roteParams.get('repoName');
             this.repoObject = this._reposService.getRepo(this.repoName);
@@ -31,11 +34,14 @@ var LanguageComponent = (function () {
             });
         }
     };
+    LanguageComponent.prototype.clickedIt = function () {
+        this.toggle = !this.toggle;
+    };
     LanguageComponent = __decorate([
         core_1.Component({
             selector: 'language',
-            template: "<div [innerHtml]=\"html_content\"></div>",
-            directives: [],
+            template: "\n    <div id=\"wrapper\" [ngClass]=\"{toggled:toggle}\">\n        <div id=\"sidebar-wrapper\">\n            <ul class=\"sidebar-nav\">\n                <li class=\"sidebar-brand\">\n                   <a>Sidebar</a>\n                </li>\n                <li *ngFor=\"let repo of repos\" [routerLink]=\"['Language', {repoName:repo.name}]\">\n                    <a>{{repo.name}}</a>\n                </li>\n            </ul>\n        </div>\n        <div id=\"page-content-wrapper\">\n            <div class=\"container-fluid\">\n              <a class=\"btn btn-default\" id=\"menu-toggle\" (click)=\"clickedIt()\">Toggle Menu</a>\n              <div [innerHtml]=\"html_content\"></div>\n            </div>\n        </div>\n    ",
+            directives: [router_deprecated_2.ROUTER_DIRECTIVES],
             providers: [github_service_1.githubService, repos_service_1.ReposService]
         }), 
         __metadata('design:paramtypes', [github_service_1.githubService, repos_service_1.ReposService, router_deprecated_1.RouteParams])

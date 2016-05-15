@@ -7,6 +7,7 @@ import {ReposService} from './repos.service'
     selector: 'navbar',
     templateUrl: 'app/navbar.component.html',
     directives: [ROUTER_DIRECTIVES],
+    styles: ['.navbar-default { margin-bottom: 0; border-radius: 0}'],
     providers: [ReposService]
 })
 export class NavBarComponent {
