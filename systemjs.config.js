@@ -4,11 +4,11 @@
     var map = {
         'app':                        'app', // 'dist',
 
-        'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
-        'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api',
-        '@angular':                   'https://npmcdn.com/@angular',
-        'lodash':                     'https://npmcdn.com/lodash@4.12.0',
-        'marked':                     'https://npmcdn.com/marked@0.3.5'
+        'rxjs':                       'https://unpkg.com/rxjs@5.0.0-beta.6',
+        'angular2-in-memory-web-api': 'https://unpkg.com/angular2-in-memory-web-api',
+        '@angular':                   'https://unpkg.com/@angular',
+        'lodash':                     'https://unpkg.com/lodash@4.12.0',
+        'marked':                     'https://unpkg.com/marked@0.3.5'
     };
 
     // packages tells the System loader how to load when no filename and/or no extension
